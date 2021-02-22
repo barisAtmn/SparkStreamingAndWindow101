@@ -6,7 +6,9 @@ import org.apache.spark.sql.types.{
   DoubleType,
   IntegerType,
   StructField,
-  StructType
+  StructType,
+  StringType,
+  TimestampType
 }
 
 package object spark101 {
@@ -33,14 +35,24 @@ package object spark101 {
     )
   )
 
+  val purchaseSchema = StructType(
+    Array(
+      StructField("id", StringType, true),
+      StructField("time", TimestampType, true),
+      StructField("item", StringType, true),
+      StructField("quantity", IntegerType, true)
+    )
+  )
+
   val spark = SparkSession
     .builder()
     .appName("SparkStreaming")
     .master("local[8]")
     .config("spark.driver.maxResultSize", "8g") // Advanced select spark and paste spark.driver.maxResultSize 0 (for unlimited) or whatever the value suits you.
+    .config("spark.sql.streaming.forceDeleteTempCheckpointLocation", true)
     .getOrCreate()
 
-  spark.sparkContext.setLogLevel("ERROR")
+  spark.sparkContext.setLogLevel("WARN")
 
   case class Person(name: Option[String], lastname: Option[String])
 

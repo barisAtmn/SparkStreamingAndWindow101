@@ -1,7 +1,21 @@
+# Spark Streaming 101
 
-==> Lambdas cant be optimizated by Spark
+- Lambdas/UDFs can't be optimizated by Spark
 
-==> Low level api => Dstreams == Discretized Streams
+- Low level api => Dstreams == Discretized Streams
 
-==> Without checkpoints the writing to Kafka will fail
+- Without checkpoints the writing to Kafka will fail
 
+- Event Time :  The moment the record was generated
+
+- Processing Time : The moment the record arrives at Spark
+
+- Multiple streaming aggregations are not supported with streaming DataFrames/Datasets
+
+- Watermarks : Handle late data in time-based aggregations
+How far back we still consider records before dropping them
+
+```
+P.S : A lot of information/codes are from RocktheJVM Spark Streaming Course.
+(Strongly suggested)
+```
