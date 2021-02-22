@@ -1,6 +1,6 @@
 # Spark Streaming 101
 
-- Lambdas/UDFs can't be optimizated by Spark
+- Lambdas/UDFs can't be optimized by Spark
 
 - Low level api => Dstreams == Discretized Streams
 
@@ -14,6 +14,10 @@
 
 - Watermarks : Handle late data in time-based aggregations
 How far back we still consider records before dropping them
+
+- Pivot() is an aggregation where one of the grouping columns values transposed into individual 
+  columns with distinct data.
+  
 
 ```
 P.S : A lot of information/codes are from RocktheJVM Spark Streaming Course.

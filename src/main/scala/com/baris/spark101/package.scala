@@ -5,9 +5,9 @@ import org.apache.spark.sql.types.{
   DateType,
   DoubleType,
   IntegerType,
+  StringType,
   StructField,
   StructType,
-  StringType,
   TimestampType
 }
 
@@ -51,8 +51,6 @@ package object spark101 {
     .config("spark.driver.maxResultSize", "8g") // Advanced select spark and paste spark.driver.maxResultSize 0 (for unlimited) or whatever the value suits you.
     .config("spark.sql.streaming.forceDeleteTempCheckpointLocation", true)
     .getOrCreate()
-
-  spark.sparkContext.setLogLevel("WARN")
 
   case class Person(name: Option[String], lastname: Option[String])
 
