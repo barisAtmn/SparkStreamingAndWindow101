@@ -83,3 +83,6 @@ fabric.properties
 
 /src/main/resources/data/Stocks/
 /src/main/resources/data.Players/
+
+.idea/
+.bsp/
