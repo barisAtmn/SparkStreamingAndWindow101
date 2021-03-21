@@ -18,6 +18,7 @@ How far back we still consider records before dropping them
 - Pivot() is an aggregation where one of the grouping columns values transposed into individual 
   columns with distinct data.
   
+- nc -lk 9999 // start server port number in 9999 
 
 ```
 P.S : A lot of information/codes are from RocktheJVM Spark Streaming Course.

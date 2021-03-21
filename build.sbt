@@ -12,6 +12,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= sparkLibraries
+libraryDependencies ++= rocksDB
 libraryDependencies ++= loggingLibraries
 libraryDependencies ++= delta
 libraryDependencies ++= s3

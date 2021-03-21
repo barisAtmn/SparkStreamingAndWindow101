@@ -17,6 +17,8 @@ object Dependencies {
     "org.apache.spark" %% "spark-streaming" % sparkVersion
   )
 
+  lazy val rocksDB = Seq("ru.chermenin" %% "spark-states" % "0.2")
+
   lazy val delta = Seq("io.delta" %% "delta-core" % "0.8.0")
 
   lazy val s3 = Seq(
